@@ -83,9 +83,6 @@ GEM
     importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     json (2.6.2)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -221,7 +218,6 @@ DEPENDENCIES
   bootsnap
   debug
   importmap-rails
-  jbuilder
   puma (~> 5.0)
   rack-mini-profiler
   rails (~> 7.0.4)
