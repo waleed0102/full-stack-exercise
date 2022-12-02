@@ -13,10 +13,12 @@ RSpec.describe 'projects/index' do
   before do
     assign(:projects, [
              Project.create!(
+               payment_date: Date.current + 1.month,
                title: 'Project 1',
                fund:
              ),
              Project.create!(
+               payment_date: Date.current + 2.months,
                title: 'Project 2',
                fund:
              )

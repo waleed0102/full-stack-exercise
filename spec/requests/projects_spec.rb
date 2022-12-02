@@ -12,7 +12,8 @@ RSpec.describe '/projects' do
   let(:valid_attributes) do
     {
       fund_id: fund.id,
-      title: 'Project'
+      title: 'Project',
+      payment_date: Date.current + 1.month
     }
   end
 

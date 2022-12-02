@@ -11,6 +11,7 @@ RSpec.describe 'projects/edit' do
   end
   let(:project) do
     Project.create!(
+      payment_date: Date.current + 1.month,
       title: 'Title',
       fund:
     )
@@ -27,6 +28,8 @@ RSpec.describe 'projects/edit' do
       assert_select 'input[name=?]', 'project[title]'
 
       assert_select 'select[name=?]', 'project[fund_id]'
+
+      assert_select 'input[name=?]', 'project[payment_date]'
     end
   end
 end

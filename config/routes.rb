@@ -2,8 +2,9 @@
 
 Rails.application.routes.draw do
   resources :applicants
-  resources :projects
   resources :funds
+  resources :payments, only: [:index]
+  resources :projects
 
   root 'applicants#index'
 end

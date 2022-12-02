@@ -12,6 +12,7 @@ RSpec.describe 'applicants/new' do
 
   let(:project) do
     Project.create!(
+      payment_date: Date.current + 1.month,
       title: 'Project',
       fund:
     )

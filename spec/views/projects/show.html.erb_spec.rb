@@ -12,6 +12,7 @@ RSpec.describe 'projects/show' do
 
   before do
     assign(:project, Project.create!(
+                       payment_date: Date.current + 1.month,
                        title: 'Project',
                        fund:
                      ))
