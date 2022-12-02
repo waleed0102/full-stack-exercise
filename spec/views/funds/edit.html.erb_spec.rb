@@ -5,8 +5,8 @@ require 'rails_helper'
 RSpec.describe 'funds/edit' do
   let(:fund) do
     Fund.create!(
-      title: 'MyString',
-      total: 1
+      title: 'Title',
+      total: 10_000
     )
   end
 

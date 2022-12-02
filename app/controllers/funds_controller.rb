@@ -6,7 +6,7 @@ class FundsController < ApplicationController
 
   # GET /funds
   def index
-    @funds = Fund.all
+    @funds = Fund.order(:title)
   end
 
   # GET /funds/1

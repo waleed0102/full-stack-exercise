@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :fund_id, style: "display: block" %>
-    <%= form.collection_select :fund_id, Fund.all, :id, :title %>
+    <%= form.collection_select :fund_id, Fund.order(:name), :id, :title %>
   </div>
 
   <div>

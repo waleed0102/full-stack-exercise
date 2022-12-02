@@ -2,13 +2,23 @@
 
 <h1>Funds</h1>
 
-<div id="funds">
-  <% @funds.each do |fund| %>
-    <%= render fund %>
-    <p>
-      <%= link_to "Show this fund", fund %>
-    </p>
-  <% end %>
-</div>
+<p><%= link_to "New fund", new_fund_path %></p>
 
-<%= link_to "New fund", new_fund_path %>
+<table id="funds">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @funds.each do |fund| %>
+    <tr>
+      <td><%= fund.title %></td>
+      <td><%= fund.total %></td>
+      <td><%= link_to "Show this fund", fund %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

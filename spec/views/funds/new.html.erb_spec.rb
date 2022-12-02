@@ -5,8 +5,8 @@ require 'rails_helper'
 RSpec.describe 'funds/new' do
   before do
     assign(:fund, Fund.new(
-                    title: 'MyString',
-                    total: 1
+                    title: 'Title',
+                    total: 10_000
                   ))
   end
 

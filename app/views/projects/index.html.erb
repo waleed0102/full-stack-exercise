@@ -2,13 +2,23 @@
 
 <h1>Projects</h1>
 
-<div id="projects">
-  <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
-  <% end %>
-</div>
+<p><%= link_to "New project", new_project_path %></p>
 
-<%= link_to "New project", new_project_path %>
+<table id="funds">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Fund</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.title %></td>
+      <td><%= project.fund.title %></td>
+      <td><%= link_to "Show this project", project %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

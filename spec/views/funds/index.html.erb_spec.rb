@@ -18,8 +18,8 @@ RSpec.describe 'funds/index' do
 
   it 'renders a list of funds' do
     render
-    cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
+    cell_selector = 'tr>td'
     assert_select cell_selector, text: Regexp.new('Project'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new(20_000.to_s), count: 2
+    assert_select cell_selector, text: '20000', count: 2
   end
 end

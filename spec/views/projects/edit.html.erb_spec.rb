@@ -11,7 +11,7 @@ RSpec.describe 'projects/edit' do
   end
   let(:project) do
     Project.create!(
-      title: 'MyString',
+      title: 'Title',
       fund:
     )
   end

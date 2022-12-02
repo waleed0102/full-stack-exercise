@@ -12,7 +12,7 @@ RSpec.describe 'projects/show' do
 
   before do
     assign(:project, Project.create!(
-                       title: 'Title',
+                       title: 'Project',
                        fund:
                      ))
   end
@@ -20,6 +20,6 @@ RSpec.describe 'projects/show' do
   it 'renders attributes in <p>' do
     render
     expect(rendered).to match(/Title/)
-    expect(rendered).to match(//)
+    expect(rendered).to match(/Fund/)
   end
 end

@@ -12,6 +12,9 @@ Rails/I18nLocaleTexts:
 RSpec/MultipleExpectations:
   Enabled: false
 
+RSpec/ExampleLength:
+  Max: 10
+
 Style/Documentation:
   Exclude:
     - 'db/migrate/*.rb'

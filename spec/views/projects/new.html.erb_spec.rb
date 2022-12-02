@@ -12,7 +12,7 @@ RSpec.describe 'projects/new' do
 
   before do
     assign(:project, Project.new(
-                       title: 'MyString',
+                       title: 'Project',
                        fund:
                      ))
   end

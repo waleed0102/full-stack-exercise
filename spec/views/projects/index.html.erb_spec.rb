@@ -25,8 +25,8 @@ RSpec.describe 'projects/index' do
 
   it 'renders a list of projects' do
     render
-    cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
-    assert_select cell_selector, text: Regexp.new('Title'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new('Fund'.to_s), count: 2
+    cell_selector = 'tr>td'
+    assert_select cell_selector, text: Regexp.new('Project'.to_s), count: 2
+    assert_select cell_selector, text: 'Fund', count: 2
   end
 end
