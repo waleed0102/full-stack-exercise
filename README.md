@@ -40,6 +40,8 @@ This is a Rails 7.0 application, using RSpec for specs, run on Ruby 3.1. Once yo
 
 We are assuming that you are familiar with the process of getting an existing Rails app setup and started, but please do let us know if you require any pointers.
 
-Feel free to approach the exercise solutions using whatever approach/libraries you feel most appropriate, and shows off your skills and capabilities.
+Please implement your solutions as if this was a production application.
 
-If you have any questions regarding this exercise please do not hesitate to ask us.
+Feel free to approach the exercise solutions using whatever approach/libraries you feel most appropriate, and shows off your skills and capabilities. If you felt there were other ways you could improve the app and you had some time please implement these, or let us know what you think could be better.
+
+Finally, if you have any questions regarding this exercise please do not hesitate to ask us.
