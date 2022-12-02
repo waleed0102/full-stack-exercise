@@ -6,12 +6,12 @@ RSpec.describe 'funds/index' do
   before do
     assign(:funds, [
              Fund.create!(
-               title: 'Title',
-               total: 2
+               title: 'Project 1',
+               total: 20_000
              ),
              Fund.create!(
-               title: 'Title',
-               total: 2
+               title: 'Projects 2',
+               total: 20_000
              )
            ])
   end
@@ -19,7 +19,7 @@ RSpec.describe 'funds/index' do
   it 'renders a list of funds' do
     render
     cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
-    assert_select cell_selector, text: Regexp.new('Title'.to_s), count: 2
-    assert_select cell_selector, text: Regexp.new(2.to_s), count: 2
+    assert_select cell_selector, text: Regexp.new('Project'.to_s), count: 2
+    assert_select cell_selector, text: Regexp.new(20_000.to_s), count: 2
   end
 end
