@@ -43,6 +43,7 @@ RSpec.describe 'payments/index.html.erb' do
       status: 4
     )
 
+    @projects = [project, project2]
     project2
   end
 
