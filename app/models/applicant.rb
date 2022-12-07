@@ -2,7 +2,18 @@
 
 # Applications to Projects
 class Applicant < ApplicationRecord
+  attr_accessor :comment
+
   attribute :status, :integer, default: 0
+
+  has_paper_trail only: %i[status],
+                  on: %i[create update],
+                  meta: {
+                    name: :name,
+                    status: :status,
+                    comment: :comment
+                  },
+                  versions: { class_name: 'ApplicantVersion' }
 
   validates :name, presence: true, uniqueness: true
   validates :overview, presence: true
